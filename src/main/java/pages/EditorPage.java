@@ -11,7 +11,7 @@ public class EditorPage {
     public static String framename = "mce_0_ifr";
     public static final By ENTER_AREA = By.id("tinymce");
 
-    public static void enterText(){
+    public static void enterText() {
         switchTo().frame(framename);
         $(ENTER_AREA).sendKeys("Hello world!");
     }

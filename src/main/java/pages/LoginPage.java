@@ -14,12 +14,14 @@ public class LoginPage {
     private static final By SUBMIT = By.id("SubmitButton");
     private static final By SIGN_OUT = By.cssSelector("a[title=\"Sign out\"]");
 
-    public static void login(){
+    public static void login() {
         $(USER_NAME).sendKeys(USER);
         $(PASSWORD).sendKeys(USER_PASSWORD);
         $(SUBMIT).submit();
     }
 
-    public static void quit(){ $(SIGN_OUT).click(); }
+    public static void quit() {
+        $(SIGN_OUT).click();
+    }
 
 }

@@ -4,21 +4,21 @@ import org.testng.annotations.Test;
 import pages.LoginPage;
 
 
-public class HomePageTest extends TestBase{
+public class HomePageTest extends TestBase {
 
     @AfterMethod
-    public void quit(){
+    public void quit() {
         LoginPage.quit();
     }
 
     @Test
-    public void verifyLoadedPage(){
+    public void verifyLoadedPage() {
         pages.LoginPage.login();
         pages.HomePage.pageLoad();
     }
 
     @Test
-    public void toOfficeTab(){
+    public void toOfficeTab() {
         pages.LoginPage.login();
         pages.HomePage.pageLoad();
         pages.HomePage.tableOfficeName();

@@ -9,12 +9,12 @@ public class AlertPageTest extends TestBaseAlert {
     }
 
     @Test
-    public void checkJSConfirm(){
-            AlertPage.checkJSConfirm();
+    public void checkJSConfirm() {
+        AlertPage.checkJSConfirm();
     }
 
     @Test
-    public void checkJSPrompt(){
+    public void checkJSPrompt() {
         AlertPage.checkJSConfirm();
     }
 

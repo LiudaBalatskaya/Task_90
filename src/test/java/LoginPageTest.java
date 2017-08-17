@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 public class LoginPageTest extends TestBase {
     @Test
-    public void credentials(){
+    public void credentials() {
         pages.LoginPage.login();
     }
 

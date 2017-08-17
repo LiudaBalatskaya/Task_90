@@ -13,7 +13,7 @@ public class HomePage {
     private static final By OFFICE = By.id("officeWidgetContent");
     private static final By ROWS = By.cssSelector(".widgetSelectableRow");
 
-    public static void pageLoad(){
+    public static void pageLoad() {
         $(byText("RMSys - Home"));
     }
 
@@ -22,7 +22,7 @@ public class HomePage {
     }
 
     public static void officeLayouts() {
-        WebElement table =  $(OFFICE);
+        WebElement table = $(OFFICE);
         $(table).$(ROWS).shouldBe(visible);
 
     }
