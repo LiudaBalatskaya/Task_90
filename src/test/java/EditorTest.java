@@ -7,7 +7,6 @@ import static pages.EditorPage.enterText;
 public class EditorTest extends TestBaseEditor {
     @Test
     public void checkEditor() {
-
         enterText();
         checkText();
     }

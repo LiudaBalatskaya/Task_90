@@ -8,11 +8,11 @@ import static com.codeborne.selenide.Selenide.switchTo;
 
 public class EditorPage {
 
-    public static String framename = "mce_0_ifr";
-    public static final By ENTER_AREA = By.id("tinymce");
+    protected static final String FRAME_NAME = "mce_0_ifr";
+    protected static final By ENTER_AREA = By.id("tinymce");
 
     public static void enterText() {
-        switchTo().frame(framename);
+        switchTo().frame(FRAME_NAME);
         $(ENTER_AREA).sendKeys("Hello world!");
     }
 

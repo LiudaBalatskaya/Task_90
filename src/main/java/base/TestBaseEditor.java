@@ -9,7 +9,7 @@ public class TestBaseEditor {
     protected static final String FRAME_URL = "https://the-internet.herokuapp.com/iframe";
 
     @BeforeClass
-    public static void setup() {
+    public void setup() {
         open(FRAME_URL);
     }
 }

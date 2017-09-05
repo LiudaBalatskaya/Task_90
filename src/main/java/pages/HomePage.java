@@ -2,19 +2,21 @@ package pages;
 
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.title;
 
 public class HomePage {
 
     private static final By OFFICE = By.id("officeWidgetContent");
     private static final By ROWS = By.cssSelector(".widgetSelectableRow");
 
-    public static void pageLoad() {
+    public static String pageLoad() {
         $(byText("RMSys - Home"));
+        return title().toString();
+
     }
 
     public static void tableOfficeName() {
@@ -22,9 +24,12 @@ public class HomePage {
     }
 
     public static void officeLayouts() {
-        WebElement table = $(OFFICE);
-        $(table).$(ROWS).shouldBe(visible);
+        $(OFFICE).$(ROWS).shouldBe(visible);
 
+    }
+
+    public static boolean office118() {
+        return $(byText("Chapaeva 118")).exists();
     }
 }
 

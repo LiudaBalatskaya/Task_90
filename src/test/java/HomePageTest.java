@@ -1,6 +1,8 @@
 import base.TestBase;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
+import pages.HomePage;
 import pages.LoginPage;
 
 
@@ -13,16 +15,17 @@ public class HomePageTest extends TestBase {
 
     @Test
     public void verifyLoadedPage() {
-        pages.LoginPage.login();
-        pages.HomePage.pageLoad();
+        LoginPage.login();
+        HomePage.pageLoad();
     }
 
     @Test
     public void toOfficeTab() {
-        pages.LoginPage.login();
-        pages.HomePage.pageLoad();
-        pages.HomePage.tableOfficeName();
-        pages.HomePage.officeLayouts();
+        LoginPage.login();
+        HomePage.pageLoad();
+        HomePage.tableOfficeName();
+        HomePage.officeLayouts();
+        Assert.assertTrue(HomePage.office118());
     }
 
 }

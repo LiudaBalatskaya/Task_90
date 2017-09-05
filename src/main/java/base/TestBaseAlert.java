@@ -9,7 +9,7 @@ public class TestBaseAlert {
     protected static final String ALERT_URL = "https://the-internet.herokuapp.com/javascript_alerts";
 
     @BeforeClass
-    public static void setup() {
+    public void setup() {
         open(ALERT_URL);
     }
 }
